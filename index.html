@@ -1,21 +1,44 @@
+<!--Es de buenas practicas comenzar a estructurar nuestros archivos ordenando la estrutura para el desarrollo
+en este caso de el portafolio web, por lo tanto esta estructura puede variar segun nuestro proyecto
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<!--Especifica el idioma del contenido del documento-->
+    <meta http-equiv="content-language" content="es">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Agregamos dos etiquetas meta para el Seo de la clase anterior mas otra etiqueta meta la del autho-->
+<meta name="description" content="Nombre del grupo o alumno, creado por el nombre del grupo especializado en [Programación]">
+<!--Palabras clave para los motores de búsqueda, no se debe abusar de la cantidad, porque en ese caso nos enviarian al final de la lista-->
+<meta name="keywords" content="portafolio, desarrollador web, [programador], proyectos, contacto">
+<meta name="author" content="Tu nombre">
     <title>Portafolio Web</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./Css/style.css">
 </head>
 <body>
     <header>
-        <h1>Técnica Universitaria en Programación</h1>
+        <h1>Pamela G. M. Cuello</h1>
                 <nav>
+                    <!--Agregue los nuevos enlaces para nuestro portafolio web-->
             <ul class="navigation">
                 <li><a href="#Sobre mi">Sobre mi</a></li>
                 <li><a href="#Proyectos">Proyectos</a></li>
-                <li><a href="#Facebook">Facebook</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+                <li><a href="#Experiencia">Experiencia</a></li>
             </ul>
         </nav>
     </header>    
+    <main>
+        <section class="Sobre mi">
+            <article class="container-sobre-mi">
+                <h2>
+                    Soy <b> Técnica en Programación </b>, egresada de la Universidad Tecnológica Nacional (UTN) - FRSR, Argentina. 
+                    Me apasiona programar y desarrollar soluciones de aplicaciones web originales y personalizadas. 
+                </h2>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
