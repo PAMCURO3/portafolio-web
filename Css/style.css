@@ -1,24 +1,29 @@
 /*titulo del header*/ 
 header { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 1rem 3rem; 
+    display: flex; /*coloca el titulo y la navegacion uno al lado del otro*/
+    justify-content: space-between; /*manda el titulo a la izquierda y la navegacion a la derecha*/
+    align-items: center; /*centra verticalmente el titulo y la navegacion*/ 
+    padding: 1rem 3rem; /*agrega espacio interno al header*/
 } 
- 
+titulo{
+    display: flex; /* Coloca los elementos uno al lado del otro */ 
+    justify-content: space-between; /*manda el titulo a la izquierda y la navegacion a la derecha*/
+    align-items: center; /*centra verticalmente el titulo y la navegacion*/ 
+    padding: 1rem 3rem; /*agrega espacio interno al header*/
+}
 .navigation { 
     display: flex;          /* Coloca los elementos uno al lado del otro */ 
     justify-content: flex-end; /* Los lleva hacia la derecha */ 
-    align-items: center; 
+    align-items: center; /*centra los botones verticalmente*/
     gap: 1.5rem;            /* Espacio entre botones */ 
     list-style: none;       /* Quita los puntos de la lista */ 
-    margin: 0; 
-    padding: 0; 
+    margin: 0; /*quita el margen de la lista*/
+    padding: 0; /*quita el espacio interno de la lista*/
 } 
- 
+ /*enlaces dentro de los botones*/
 a { 
-    text-decoration: none; 
-    color: rgb(215, 211, 211); 
+    text-decoration: none; /*quita el subrayado del enlace*/
+    color: rgb(218, 216, 216); /*color del tecto*/
 } 
 * {
     box-sizing: border-box; /*mantiene el padding dentro del ancho del elemento*/
@@ -41,76 +46,93 @@ a {
  
     line-height: 2.5rem; /*espaciado entre los parrafos del texto*/ 
     font-size: large; /*tamaño de la fuente*/ 
-    color: rgb(250, 250, 250); /*color del texto*/
+    color: rgb(255, 255, 255); /*color del texto*/
  
-    background-color: rgba(255, 255, 255, 0.05); /*color de fondo del contenedor*/
+    background-color: rgba(111, 136, 112, 0.05); /*color de fondo del contenedor*/
     border-radius: 1rem; /*redondea las esquinas*/
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); /*sombra del contenedor*/
+    box-shadow: 0 0 1rem rgba(6, 255, 234, 0.3); /*sombra del contenedor*/
 }
 
 /*Cuerpo de la pagina*/
-
 body { 
-    color: rgb(215, 211, 211); 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
- 
+    color: rgb(246, 249, 250); /*Color del titulo de la página*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*familia de fuentes tipograficas de la pagina*/
+ /*hacemos que el fondo de la pagina vaya en gradiente*/
     background: linear-gradient( 
-        135deg, 
-        rgb(11, 19, 19), 
-        rgb(84, 145, 145) 
+        135deg, /*angulo o direccion del gradiente*/ 
+        rgb(0, 0, 0), /*color inicial del gradiente*/
+        rgb(0, 240, 248) /*color final del gradiente*/
     ); 
  
-    margin: 0; 
-    min-height: 100vh; 
+    margin: 0; /*elimina el margen que trae el navegador por defecto*/
+    min-height: 100vh; /*hace que el body ocupe como minimo toda la altura de la pantalla*/
 } 
- 
  
 /*barra de navegación*/ 
  
 .navigation li { 
-    font-size: 1rem; 
-    width: 100px; 
-    text-align: center; 
-    padding: 0.5rem; 
-    background: darkslategrey; 
-    border-radius: 0.5rem; 
-    box-shadow: 0 0 0.5rem rgba(255, 249, 249, 0.5); 
- 
-    transition: 0.3s; 
+    font-size: 1rem; /*tamaño de la letra de los botones*/
+    width: 100px; /*ancho de cada boton*/
+    text-align: center; /*centra el texto dentro del boton*/
+    padding: 0.5rem; /*espacio interno entre el texto y los bordes del boton*/
+    background: rgb(18, 68, 68); /*color de fondo de los botones*/
+    border-radius: 0.5rem; /*redondea las esquinas de los botones*/
+    box-shadow: 0 0 0.5rem rgba(241, 245, 244, 0.5); /*agrega una sombra alrededor de los botones*/
+    transition: 0.3s; /*tiempo que tarda la transicion de los efectos del boton*/
 } 
- 
+ /*Efecto de pasar el mouse sobre los botones*/
 .navigation li:hover { 
-    background: rgb(67, 119, 119); 
-    transform: translateY(-3px); 
+    background: rgb(205, 236, 236); /*cambia el color del boton*/
+    transform: translateY(-4px); /*mueve el boton hacia arriba*/
 } 
- 
- 
 /*Media Queries agrupadas*/ 
 /*Celular pantallas pequeñas, hasta 767px*/ 
- 
-@media (max-width: 767px) { 
+/*barra de navegacion de celular*/ 
+@media (max-width: 767px) { /*aplica estos estilos cuando la pantalla tiene hasta 767px de ancho*/
  
     header { 
         flex-direction: column; /*coloca titulo y navegacion uno debajo del otro*/ 
-        gap: 1rem; 
-        padding: 1rem;
+        gap: 1rem; /*espacio entre el titulo y la navegacion*/ 
+        padding: 1rem;/*espacio interno del header*/
     } 
  
     .titulo { 
-        text-align: center; 
+        text-align: center; /*centra el texto del titulo*/ 
     } 
  
     .navigation { 
         flex-direction: column; /*botones uno debajo del otro*/ 
-        gap: 1rem; 
-        align-items: center; 
+        gap: 1rem; /*espacio entre los botones*/ 
+        align-items: center; /*centra los botones horizontalmente*/ 
     } 
  
     .container-sobre-mi { 
         width: 90%;            /*ancho del contenedor en celular*/ 
-        padding: 1rem; 
+        padding: 1rem; /*espacio interno del contenedor*/ 
         margin-top: 2rem;      /*margen a lo alto*/ 
         line-height: 2.5rem;   /*espaciado entre los parrafos del texto*/ 
         font-size: small;      /*tamaño de la fuente*/ 
     } 
 } 
+/*Tableta (Pantallas medianas, entre 768px y 1023px)*/
+@media (min-width: 768px) and (max-width: 1023px){ /*aplica estos estilos entre 768px y 1023px*/
+    .titulo{
+        justify-content: center;/*centra el contenido del titulo*/
+    }
+    .navigation{
+        gap: 2rem;/*espacio entre los botones*/
+        justify-content: center;/*centra los botones de navegacion*/
+    }
+}
+
+/* Escritorio (Pantallas anchas, 1024px y superiores) */
+@media (min-width: 1024px){/*aplica estos estilos desde los 1024px en adelante*/
+    .titulo{
+        justify-content: flex-start;/*coloca el contenido del titulo hacia la izquierda*/
+    }
+    .navigation{
+        gap: 3rem;/*espacio entre los botones*/
+        justify-content: flex-end;/*coloca los botones hacia la derecha*/
+        margin: 0 3rem;/*agrega margen a la izquierda y derecha de la navegacion*/
+    }
+}
